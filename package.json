@@ -1,0 +1,63 @@
+{
+  "name": "my-qwik-basic-starter",
+  "description": "Demo App with Routing built-in (recommended)",
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "private": true,
+  "trustedDependencies": [
+    "sharp"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "prebuild.pandacss": "panda codegen --silent",
+    "preview": "qwik build preview && vite preview --open",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik",
+    "drizzle:check": "drizzle-kit check:pg",
+    "drizzle:drop": "drizzle-kit drop",
+    "drizzle:generate": "drizzle-kit generate:pg",
+    "drizzle:push": "drizzle-kit push:pg",
+    "drizzle:studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "^1.4.5",
+    "@builder.io/qwik-city": "^1.4.5",
+    "@builder.io/vite-plugin-macro": "~0.0.7",
+    "@pandacss/dev": "^0.30.01",
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.6",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "drizzle-kit": "^0.20.14",
+    "eslint": "^8.56.0",
+    "eslint-plugin-qwik": "^1.4.5",
+    "pg": "^8.11.3",
+    "prettier": "^3.2.4",
+    "typescript": "5.3.3",
+    "undici": "*",
+    "vite": "^5.0.12",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@lucia-auth/adapter-drizzle": "^1.0.2",
+    "@lucia-auth/adapter-postgresql": "^3.1.0",
+    "@modular-forms/qwik": "^0.23.1",
+    "drizzle-orm": "^0.29.4",
+    "lucia": "^3.0.1",
+    "oslo": "^1.1.3",
+    "postgres": "^3.4.3",
+    "typeid-js": "^0.5.0",
+    "valibot": "^0.29.0"
+  }
+}
